@@ -92,6 +92,13 @@ const _ = {
     const newArray = array.slice(n);
 
     return newArray;
+  },
+
+  // Recreated 'dropWhile' array method
+  dropWhile(array, predicate) {
+    let dropNumber = array.findIndex((element, index) => !predicate(element, index, array));
+    let droppedArray = this.drop(array, dropNumber);
+    return droppedArray;
   }
 }
 
