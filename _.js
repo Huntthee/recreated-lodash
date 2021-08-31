@@ -99,6 +99,16 @@ const _ = {
     let dropNumber = array.findIndex((element, index) => !predicate(element, index, array));
     let droppedArray = this.drop(array, dropNumber);
     return droppedArray;
+  },
+
+  // Recreated 'chunk' array method
+  chunk(array, size=1) {
+    let arrayChunks = [];
+    for (let i = 0; i < array.length; i += size) {
+      let arrayChunk = array.slice(i, i+size);
+      arrayChunks.push(arrayChunk);
+    }
+    return arrayChunks;
   }
 }
 
