@@ -82,6 +82,16 @@ const _ = {
       }
       return undefined;
     } 
+  },
+
+  // Recreated 'drop' array method
+  drop(array, n) {
+    if (n <= 0 || n === null || n === undefined) {
+      n = 1;
+    }
+    const newArray = array.slice(n);
+
+    return newArray;
   }
 }
 
